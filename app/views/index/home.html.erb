@@ -1,0 +1,24 @@
+
+<%=image_tag "tajmahal.jpg"%> 
+<%=link_to "click here", image_1_path, :remote => true, :class => "button"%>
+
+
+<%=image_tag "india.jpg"%>
+<%=link_to "click here", image_3_path, :remote => true, :class => "button"%>
+
+<%=image_tag "charminar.jpg"%>
+<%=link_to "click here", image_test_path, :remote => true, :class => "button"%>
+
+<% if user_signed_in? %>  
+    Signed in as <%= current_user.email %> <br />
+<%= link_to "Sign out", destroy_user_session_path,:method => :delete , :class => "button rights"%> <br />
+	<%else%>
+<%=link_to "Sign Up", jquery_signup_path,:remote => true, :class => "button rights"%> 
+<%=link_to "Sign In", tab_path, :remote => true, :class => "button rights"%> 
+<%end%>
+
+
+<div class="popupContact"></div>
+ 
+<div id="backgroundPopup"></div> 
+

@@ -1,0 +1,35 @@
+<h2>Sign up from controller</h2>
+
+<div id="popupContact>
+
+
+<%= form_for(@pop) do |f| %>
+  
+
+  <%= f.label :email %><br />
+  <%= f.email_field :email %>
+
+  <%= f.label :password %><br />
+  <%= f.password_field :password %>
+
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %>
+
+     <%= f.fields_for :profile do |builder|%>
+            <p>
+                <%=builder.label :zip, "Zip Code"%> <br />
+                <%=builder.text_field :zip%>
+            </p>
+
+            <%end%>
+            <p>
+                <%= f.label :designer %>
+
+                <%= f.check_box :designer %></p>
+
+            </p>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+</div>

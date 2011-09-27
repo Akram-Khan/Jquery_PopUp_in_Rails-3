@@ -1,0 +1,1 @@
+$("#popupContact").html("<%=escape_javascript(render new_user_registration_path)%>")

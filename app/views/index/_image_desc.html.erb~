@@ -1,0 +1,4 @@
+<%=link_to "X", :action=> "home"%>
+
+<h1>sdasdasdasd</h1>
+
